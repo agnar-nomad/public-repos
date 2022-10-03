@@ -7,8 +7,8 @@
     --dark-grayish-blue: hsl(228, 12%, 48%);
     --neutral-white: hsl(0, 0%, 100%);
     /* other assets */
-    --desktop-image: 'images/image-product-desktop.jpg';
-    --mobile-image: '.images/image-product-mobile.jpg';
+    --desktop-image: "images/image-product-desktop.jpg";
+    --mobile-image: "images/image-product-mobile.jpg";
     --text-padding: 1rem;
     --radius: 0.5rem
 }
@@ -17,7 +17,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 1px solid brown;
+    border: 1px sold brown;
 }
 body {
     background-color: var(--cream);
@@ -44,14 +44,14 @@ body {
     border-radius: var(--radius);
 
 }
-img {
-    /* src: "images/image-product-mobile.jpg"; */
-    alt: 'showroom photo of the product being bought';
-    /* max-width: 100%; */
-    height: fit-content;
-    display: block;
-    object-fit: fill;
-    overflow: hidden;
+.image {
+    background-image: url("images/image-product-mobile.jpg");
+    background-color: var(--cream);
+    width: 350px;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: var(--radius) var(--radius) 0 0;
 }
 .textfield {
@@ -112,10 +112,48 @@ img {
 
 
 
-
-
-
-
-
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 380px) {
+    body {
+        font-size: 14px;
+        height: 100vh;
+        width: 100%;
+        /* display: flex; */
+        /* flex-direction: row; */
+        justify-content: center;
+        align-items: center;
+
+    }
+    .card {
+        /* width: 350px; */
+        height: 60%;
+        max-height: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: var(--neutral-white);
+        color: var(--dark-grayish-blue);
+        border-radius: var(--radius);
+    
+    }
+    .image-div {
+        background-image: url("images/image-product-desktop.jpg");
+        background-color: var(--cream);
+        /* width: 100%; */
+        /* height: 100%; */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        /* background-clip: border-box; */
+        border-radius: var(--radius) 0 0 var(--radius) ;
+    }
+    .textfield {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: var(--text-padding);
+    }
+    
+}
