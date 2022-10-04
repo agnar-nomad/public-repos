@@ -1,6 +1,7 @@
 :root {
     /* primary colours */
     --dark-cyan: hsl(158, 36%, 37%);
+    --dark-cyan-hover: hsl(158, 41%, 25%);
     --cream: hsl(30, 38%, 92%);
     /* neutral colours */
     --very-dark-blue: hsl(212, 21%, 14%);
@@ -9,89 +10,84 @@
     /* other assets */
     --desktop-image: "images/image-product-desktop.jpg";
     --mobile-image: "images/image-product-mobile.jpg";
-    --text-padding: 1rem;
-    --radius: 0.5rem
+    --radius: 0.825rem
 }
 
 *, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 1px sold brown;
 }
+
+/* min-height needs to be in pixels because vh is not supported properly on mobile */
 body {
     background-color: var(--cream);
-    font-family: 'Montserrat', Verdana, Tahoma, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    height: 100vh;
+    font-weight: 700;
     width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 1px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-
-
 }
+/* mobile first */
 .card {
     width: 350px;
-    height: 90%;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--neutral-white);
     color: var(--dark-grayish-blue);
     border-radius: var(--radius);
-
 }
-.image {
+.image-div {
     background-image: url("images/image-product-mobile.jpg");
     background-color: var(--cream);
-    width: 350px;
-    height: 100%;
-    background-position: center;
+    max-width: 100%;
+    height: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: var(--radius) var(--radius) 0 0;
 }
 .textfield {
-    padding: var(--text-padding);
+    padding: 1.625rem;
 }
-.perfume {
-    letter-spacing: 0.3rem;
-    font-size: 0.5rem;
+.product-category {
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-size: 0.8rem;
     margin-bottom: 0.5rem;
-
 }
 .fancy-text {
-    font-family: 'Fraunces', Verdana, Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 1.9rem;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 2rem;
 }
-.title {
-    color: var(--very-dark-blue);
-}
+h1 {color: var(--very-dark-blue);}
 .description {
-    font-size: 0.76rem;
+    font-size: 0.9rem;
     margin: 1rem 0;
-    font-weight: 400;
-    line-height: 1.2rem;
+    font-weight: 700;
+    line-height: 1.5rem;
 }
 .price-tag {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
 }
 .new-price {
     color: var(--dark-cyan);
     margin-right: 1rem;
 }
 .old-price {
-    font-size: 0.7rem;
-    text-decoration: line-through;
+    font-size: 0.8rem;
+    text-decoration: line-through;  /* or use the <s></s> element */
 }
-.cart-btn {
+.btn {
     border: 0;
     width: 100%;
     height: 3rem;
@@ -101,35 +97,41 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
 }
-.cart-btn span {
+.btn span {
     font-weight: 700;
-    font-size: smaller;
-    vertical-align: middle;
     margin-left: 0.5rem;
 }
+.btn:hover {
+    background-color: var(--dark-cyan-hover);
+}
 
 
 
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; margin:1rem auto; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@media screen and (min-width: 380px) {
+
+
+/* making it responsive is easy when you set fixed sizes for the card and image sizes, e.g. here
+https://www.youtube.com/watch?v=XghPJQ1Oeks
+ */
+@media only screen and (min-width: 640px) {
     body {
-        font-size: 14px;
         height: 100vh;
         width: 100%;
-        /* display: flex; */
-        /* flex-direction: row; */
         justify-content: center;
         align-items: center;
 
     }
     .card {
-        /* width: 350px; */
-        height: 60%;
-        max-height: 60%;
+        width: 600px;
+        max-width: 80%;
+        height: 70%;
+        max-height: 80%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -141,19 +143,16 @@ body {
     .image-div {
         background-image: url("images/image-product-desktop.jpg");
         background-color: var(--cream);
-        /* width: 100%; */
-        /* height: 100%; */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        /* background-clip: border-box; */
+        width: 50%;
+        height: 100%;
         border-radius: var(--radius) 0 0 var(--radius) ;
     }
     .textfield {
         display: flex;
+        width: 50%;
         flex-direction: column;
         justify-content: space-between;
-        padding: var(--text-padding);
+        padding: 2rem;
     }
     
 }

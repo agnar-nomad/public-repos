@@ -14,20 +14,26 @@
 <body>
   <div class="card">
     <div class="image-div"></div>
+    <!-- #alternative way to insert images
+      <picture> min-width is arbitrary first, we can manage with CSS later
+      <source media="(min-width: 640px)" srcset="./images/image-product-desktop.jpg"> #if larger than min-width, use this image
+      <img src="./images/image-product-mobile.jpg">  #if smaller than min-width, use this (for mobile)
+    </picture>
+   -->
     <section class="textfield">
-      <p class="perfume">PERFUME</p>
-      <h1 class="title fancy-text">Gabrielle Essence Eau De Parfum</h1>
+      <p class="product-category">Perfume</p>
+      <h1 class="fancy-text">Gabrielle Essence Eau De Parfum</h1>
       <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
       <div class="price-tag"><span class="new-price fancy-text">$149.99</span><span class="old-price">$169.99</span>
       </div>
-      <button class="cart-btn"><i><img src="images/icon-cart.svg" alt="icon of a shopping cart"></i><span>Add to Cart</span></button>
+      <button class="btn"><i><img src="images/icon-cart.svg" alt="icon of a shopping cart"></i><span>Add to Cart</span></button>
     </section>
 
   </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Agnar</a>.
+    Coded by <a href="https://github.com/agnar-nomad/public-repos/tree/main/frontendmentor">Agnar</a>.
   </div>
 </body>
 </html>
