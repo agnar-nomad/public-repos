@@ -1,6 +1,7 @@
 :root {
     --soft-blue: hsl(215, 51%, 70%);
     --cyan: hsl(178, 100%, 50%);
+    --cyan-hover: hsla(178, 100%, 50%, 0.5);
     --main-bg-blue: hsl(217, 54%, 11%);
     --card-bg-blue: hsl(216, 50%, 16%);
     --line-color-blue: hsl(215, 32%, 27%);
@@ -18,10 +19,6 @@ body {
     font-size: 18px;
     font-weight: 300;
     color: var(--soft-blue);
-}
-main {
-    width: 100%;
-    height: 100%;
     min-height: calc(100vh - 1px);
     background-color: var(--main-bg-blue);
     display: flex;
@@ -29,6 +26,7 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 .card {
     /* declare variables for the upcoming box shadow */
     --vertical-shift: 10px;
@@ -43,7 +41,8 @@ main {
     background-color: var(--card-bg-blue);
     border-radius: 1rem;
     padding: 20px;
-    /* create the dark box shadow seen below the card, need two shadows, one to he right, one to the left */
+    margin: 0 20px;
+    /* create the dark box shadow seen below the card, need two shadows, one to the right, one to the left */
     box-shadow: 
     var(--vertical-shift) var(--horizontal-shift) var(--blur) var(--spread) var(--shadow-color),
     calc(-1 * var(--vertical-shift)) var(--horizontal-shift) var(--blur) var(--spread) var(--shadow-color);
@@ -61,8 +60,9 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
 }
-h3 {
+h1 {
     color: var(--white);
+    font-size: 120%;
 }
 ul {
     list-style-type: none;
@@ -70,8 +70,8 @@ ul {
     justify-content: space-between;
     align-items: center;
 }
-h3, ul {
-    margin: 25px 0;
+h1, ul {
+    margin: 20px 0;
 }
 li {
     display: flex;
@@ -95,13 +95,13 @@ hr {
     display: flex;
     align-items: center;
     height: 10%;
-    margin: 15px 0 10px 0;
+    margin: 15px 0 5px 0;
     font-size: 85%;
 }
 .author img {
-    border: 1px solid white;
     height: 30px;
     max-height: 100%;
+    border: 1px solid white;
     border-radius: 50%;
     margin-right: 15px;
 }
@@ -110,50 +110,45 @@ hr {
 .author span {
     color: var(--white);
 }
-h3:hover, .author span:hover {
+h1:hover, .author span:hover {
     color: var(--cyan);
     cursor: pointer;
     transition: 200ms ease-in;
 }
 
 /* hover effect on the NFT image  */
-/* ::before and ::after need to be on a container, not the image itself */
+/* ::before and/or ::after need to be on a container, not the image itself */
 .nft-container {
     position: relative;
 }
-.nft-container::after, .nft-container::before {
+.nft-container::after {
     content: "";
     position: absolute;
-    top: 0;
+    /* top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; */
+    inset: 0;
+    /* inset 0 equals ot heigh width 100% and all 4 position markers at value 0; very useful shortcut */
+    /* by using inset 0, you don't need width and height as the element will stretch all the way */
     opacity: 0;
 } 
 .nft-container::after {
     /* this is the half-transparent image cover, does not need z-index because its ::after */
-    background-color: var(--cyan);
+    background-color: var(--cyan-hover);
+    background-image: url(images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* the 4 lines above can be squeezed into this: */
+    /* background: var(--cyan-hover) url(images/icon-view.svg) center no-repeat; */
     border-radius: 0.5rem;
 }
 .nft-container:hover::after {
-    opacity: 0.5;
-}
-
-.nft-container::before {
-    /* this is the eye icon, needs a z-index */
-    /* content: url(images/icon-view.svg); nope no good*/
-    background-image: url(images/icon-view.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 3;
-}
-.nft-container:hover::before {
     opacity: 1;
-}
-.nft-container:hover::before, .nft-container:hover::after {
     cursor: pointer;
     transition: 150ms ease-in;
-} 
+}
+
 
 
  .attribution { font-size: 11px; text-align: center; }
