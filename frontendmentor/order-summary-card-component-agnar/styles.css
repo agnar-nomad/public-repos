@@ -1,108 +1,110 @@
 /* Declaring global variables that can be used in the whole CSS */
 :root {
-    --pale-blue: hsl(225, 100%, 94%);
-    --bright-blue: hsl(245, 74%, 52%);
-    --very-pale-blue: hsl(225, 100%, 98%);
-    --desaturated-blue: hsl(224, 23%, 55%);
-    --dark-blue: hsl(223, 47%, 23%);
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 74%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    background-color: var(--pale-blue);
-    font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+  background-color: var(--pale-blue);
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .card {
-    width: 450px;
-    background-color: aliceblue;
-    color: var(--desaturated-blue);
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 50px auto;
+  max-width: 450px;
+  background-color: aliceblue;
+  color: var(--desaturated-blue);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 50px auto;
 }
 .title {
-    color: var(--dark-blue);
-    font-weight: 900;
-    font-size: 32px;;
+  color: var(--dark-blue);
+  font-weight: 900;
+  font-size: 32px;
 }
 img {
-    width: 100%;
+  max-width: 100%;
+  display: block;
 }
 
 .container {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 18px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
 }
 .container > * {
-    margin: 13px 0;
+  margin: 13px 0;
 }
 .order-description {
-    line-height: 25px;
+  line-height: 25px;
 }
 .plan-container {
-    font-size: 16px;
-    background-color: var(--very-pale-blue);
-    padding: 25px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  font-size: 16px;
+  background-color: var(--very-pale-blue);
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .plan-container a {
-    color: var(--bright-blue);
-    font-size: 13px;
-    font-weight: 700;
+  color: var(--bright-blue);
+  font-size: 13px;
+  font-weight: 700;
 }
 .plan-container a:hover {
-    opacity: 0.8;
-    text-decoration: none;
+  opacity: 0.8;
+  text-decoration: none;
 }
 .plan-container strong {
-    color: var(--dark-blue);
+  color: var(--dark-blue);
 }
 
 .plan-description {
-    line-height: 20px;
-    margin-right: 75px;
+  line-height: 20px;
+  margin-right: 75px;
 }
 
 button {
-    width: 100%;
-    border: none;
-    font-weight: 700;
-    cursor: pointer;
-    font-size: 0.9rem;
-    border-radius: 12px;
+  width: 100%;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  padding: 10px 0;
 }
 .payment {
-    background-color: var(--bright-blue);
-    padding: 1rem 0;
-    color: white;
-    box-shadow: 0 20px 30px -8px rgb(197 189 245);
+  background-color: var(--bright-blue);
+  padding: 1rem 0;
+  color: white;
+  box-shadow: 0 20px 30px -8px rgb(197 189 245);
 }
 .payment:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 .cancel {
-    background-color: white;
-    color: var(--desaturated-blue);
-    margin-top: 22px;
+  background-color: white;
+  color: var(--desaturated-blue);
+  margin-top: 22px;
 }
 .cancel:hover {
-    color: black;
+  color: black;
+  background-color: var(--pale-blue);
 }
 
 #note {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
