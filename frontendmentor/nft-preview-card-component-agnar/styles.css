@@ -148,6 +148,9 @@ h3:hover, .author span:hover {
     opacity: 1;
 }
 
+/* /FIX TEH FOOTER position */
+/* add SHADOWS usin gpositon absolute and z-index on divs, if not, then try pseudoelements of the .card */
+
 
 
 
