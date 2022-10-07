@@ -1,0 +1,107 @@
+:root {
+  /* primary colours */
+  --very-dark-blue-main-bg: hsl(233, 47%, 7%);
+  --dark-desaturated-blue-card-bg: hsl(244, 38%, 16%);
+  --soft-violet-accent: hsl(277, 64%, 61%);
+  /* secondary colours */
+  --white-heading-stats: hsl(0, 0%, 100%);
+  --slightly-transparent-white-main-p: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-stat-h2: hsla(0, 0%, 100%, 0.6);
+}
+*,
+*::after,
+*::before,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 1px solid yellow;
+}
+body {
+  font-family: "Inter", sans-serif;
+  /* font-family: 'Lexend Deca', sans-serif; */
+  font-weight: 400;
+  font-size: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--very-dark-blue-main-bg);
+  color: var(--white-heading-stats);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: min(90%, 23rem);
+  height: 90%;
+  background-color: var(--dark-desaturated-blue-card-bg);
+  border-radius: 1rem;
+}
+img {
+  width: 100%;
+}
+.image-div {
+  max-width: 100%;
+  /* display: block; */
+  position: relative;
+  /* height: 100px; */
+  /* height: 30%; */
+  /* background: white url(images/image-header-mobile.jpg) center no-repeat cover; */
+  /* background-image: url(images/image-header-mobile.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.image-div::after {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--soft-violet-accent);
+  opacity: 1;
+  z-index: 4;
+}
+.description-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+.description-div > * {
+  margin: 1rem 0;
+}
+.description-div h1 {
+}
+.title-highlight {
+  color: var(--soft-violet-accent);
+}
+.description-div p {
+  color: var(--slightly-transparent-white-main-p);
+  line-height: 1.7;
+}
+.statistics-div {
+  display: flex;
+  flex-direction: column;
+}
+.upper-case {
+  text-transform: uppercase;
+}
+.statistics-div p {
+  color: var(--slightly-transparent-white-stat-h2);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: normal;
+  font-size: 80%;
+}
+.statistics-div > * {
+  margin: 0.6rem 0;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
