@@ -15,11 +15,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid yellow;
 }
 body {
   font-family: "Inter", sans-serif;
-  /* font-family: 'Lexend Deca', sans-serif; */
   font-weight: 400;
   font-size: 15px;
   width: 100%;
@@ -36,30 +34,23 @@ body {
   height: 90%;
   background-color: var(--dark-desaturated-blue-card-bg);
   border-radius: 1rem;
+  margin: 30px 0;
 }
 img {
   width: 100%;
+  display: block;
+  border-radius: 1rem 1rem 0 0;
 }
 .image-div {
-  max-width: 100%;
-  /* display: block; */
   position: relative;
-  /* height: 100px; */
-  /* height: 30%; */
-  /* background: white url(images/image-header-mobile.jpg) center no-repeat cover; */
-  /* background-image: url(images/image-header-mobile.jpg); */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
 }
 .image-div::after {
+  content: "";
   position: absolute;
   inset: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--soft-violet-accent);
-  opacity: 1;
-  z-index: 4;
+  background-color: hsl(276, 84%, 35%);
+  opacity: 0.4;
+  border-radius: 1rem 1rem 0 0;
 }
 .description-div {
   display: flex;
@@ -68,12 +59,12 @@ img {
   align-items: center;
   padding: 1rem 3rem;
   text-align: center;
-  margin: 1rem 0;
 }
 .description-div > * {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 .description-div h1 {
+  font-size: 1.84rem;
 }
 .title-highlight {
   color: var(--soft-violet-accent);
@@ -92,7 +83,6 @@ img {
 .statistics-div p {
   color: var(--slightly-transparent-white-stat-h2);
   font-family: "Lexend Deca", sans-serif;
-  font-weight: normal;
   font-size: 80%;
 }
 .statistics-div > * {
@@ -104,4 +94,62 @@ img {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 26em) {
+  body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--very-dark-blue-main-bg);
+    color: var(--white-heading-stats);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: min(80%, 80em);
+    height: 60%;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 0.3rem;
+  }
+  .image-div {
+    min-width: 50%;
+  }
+  img {
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 0.3rem 0.3rem 0;
+  }
+  .image-div::after {
+    border-radius: 0 0.3rem 0.3rem 0;
+  }
+  .description-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 2rem;
+    text-align: initial;
+    /* an experiment with font-size */
+    font-size: calc(0.2em + 1vw);
+  }
+  .description-div > * {
+    margin: 0.5em 0;
+    max-width: 100%;
+  }
+  .description-div h1 {
+    /* an experiment with font-size */
+    font-size: calc(1.3em + 1vw);
+  }
+  .statistics-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .statistics-div > * {
+    margin: 0;
+    margin-right: 4em;
+  }
 }
