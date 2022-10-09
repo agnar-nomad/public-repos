@@ -1,0 +1,18 @@
+:root {
+  /* declare variables */
+  /* main colours */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* secondary colours */
+  --transparent-white-p: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray-bg-h-btn: hsl(0, 0%, 95%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
