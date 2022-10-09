@@ -69,10 +69,8 @@ h1 {
   background-color: var(--very-dark-cyan);
   border-radius: 0 0.5rem 0.5rem 0;
 }
-button {
-  border: none;
-  font-family: "Lexend Deca", sans-serif;
-  font-weight: 400;
+.btn {
+  text-decoration: none;
   border: 2px solid var(--very-light-gray-bg-h-btn);
   border-radius: 3rem;
   width: max-content;
@@ -81,16 +79,16 @@ button {
   background-color: white;
   margin-top: auto;
 }
-.sedans button {
+.sedans .btn {
   color: var(--bright-orange);
 }
-.suvs button {
+.suvs .btn {
   color: var(--dark-cyan);
 }
-.luxury button {
+.luxury .btn {
   color: var(--very-dark-cyan);
 }
-button:hover {
+.btn:hover {
   background-color: transparent;
   color: var(--very-light-gray-bg-h-btn);
   cursor: pointer;
@@ -138,7 +136,7 @@ button:hover {
   .luxury {
     border-radius: 0 0 0.5rem 0.5rem;
   }
-  button {
+  .btn {
     font-size: 13px;
     margin-top: 2em;
   }
