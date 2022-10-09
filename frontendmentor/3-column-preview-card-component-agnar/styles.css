@@ -35,12 +35,12 @@ body {
   width: min(70%, 67em);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-radius: 0.5rem;
 }
 img {
   max-width: 100%;
   display: block;
-  width: 30%;
+  /* width: 30%; */
+  width: 4.5em;
 }
 h1 {
   font-family: "Big Shoulders Display", sans-serif;
@@ -48,26 +48,26 @@ h1 {
   text-transform: uppercase;
   color: var(--very-light-gray-bg-h-btn);
   font-size: 3em;
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
 }
 .panel {
   display: flex;
   flex-direction: column;
-  column-gap: 0rem;
-  padding: 1em 3em;
+  padding: 3.3em 3em;
   line-height: 1.7;
   color: var(--transparent-white-p);
 }
-.panel > * {
-  border: 1px solid geen;
-}
 .sedans {
   background-color: var(--bright-orange);
+  border-radius: 0.5rem 0 0 0.5rem;
 }
 .suvs {
   background-color: var(--dark-cyan);
 }
 .luxury {
   background-color: var(--very-dark-cyan);
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 button {
   border: none;
@@ -76,14 +76,24 @@ button {
   border: 2px solid var(--very-light-gray-bg-h-btn);
   border-radius: 3rem;
   width: max-content;
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 15px;
   background-color: white;
-  /* margin-top: auto; */
+  margin-top: auto;
+}
+.sedans button {
+  color: var(--bright-orange);
+}
+.suvs button {
+  color: var(--dark-cyan);
+}
+.luxury button {
+  color: var(--very-dark-cyan);
 }
 button:hover {
   background-color: transparent;
   color: var(--very-light-gray-bg-h-btn);
+  cursor: pointer;
 }
 
 .attribution {
@@ -95,4 +105,45 @@ button:hover {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 55em) {
+  body {
+    font-size: 14px;
+  }
+  .card {
+    height: 80%;
+    width: min(80%, 52em);
+  }
+}
+
+@media only screen and (max-width: 35em) {
+  body {
+    font-size: 13px;
+    height: 100%;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: min(80%, 28em);
+    margin: 5em auto;
+  }
+  .panel {
+    column-gap: 1rem;
+    padding: 3.3em 3.5em;
+  }
+  .sedans {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .luxury {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+  button {
+    font-size: 13px;
+    margin-top: 2em;
+  }
+  .attribution {
+    position: unset;
+    margin-bottom: 10px;
+  }
 }
