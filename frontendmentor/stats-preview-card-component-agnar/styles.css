@@ -48,8 +48,9 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: hsl(276, 84%, 35%);
-  opacity: 0.4;
+  background-color: hsl(276, 64%, 61%);
+  mix-blend-mode: multiply;
+  opacity: 0.8;
   border-radius: 1rem 1rem 0 0;
 }
 .description-div {
