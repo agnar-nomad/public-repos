@@ -8,10 +8,90 @@
   --transparent-white-p: hsla(0, 0%, 100%, 0.75);
   --very-light-gray-bg-h-btn: hsl(0, 0%, 95%);
 }
+*,
+*::after,
+*::before,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  background-color: var(--very-light-gray-bg-h-btn);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  height: 70%;
+  width: min(70%, 67em);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 0.5rem;
+}
+img {
+  max-width: 100%;
+  display: block;
+  width: 30%;
+}
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--very-light-gray-bg-h-btn);
+  font-size: 3em;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  column-gap: 0rem;
+  padding: 1em 3em;
+  line-height: 1.7;
+  color: var(--transparent-white-p);
+}
+.panel > * {
+  border: 1px solid geen;
+}
+.sedans {
+  background-color: var(--bright-orange);
+}
+.suvs {
+  background-color: var(--dark-cyan);
+}
+.luxury {
+  background-color: var(--very-dark-cyan);
+}
+button {
+  border: none;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  border: 2px solid var(--very-light-gray-bg-h-btn);
+  border-radius: 3rem;
+  width: max-content;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  background-color: white;
+  /* margin-top: auto; */
+}
+button:hover {
+  background-color: transparent;
+  color: var(--very-light-gray-bg-h-btn);
+}
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 10px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
