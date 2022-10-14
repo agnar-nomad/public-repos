@@ -1,0 +1,88 @@
+:root {
+  /* primary colours */
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  /* neutral colours */
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --bg-white: hsl(0, 0%, 100%);
+}
+/* base attributes and resets */
+body,
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  background-color: var(--bg-white);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* common attributes of both layouts */
+.review-card {
+  color: var(--bg-white);
+}
+.title-card,
+.ratings-section {
+  color: var(--very-dark-magenta);
+}
+
+/* build out the review cards */
+.review-card {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--very-dark-magenta);
+  border-radius: 0.5rem;
+}
+.author-info {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.author-info img {
+  border-radius: 50%;
+  height: 3em;
+}
+.author-ids {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2em;
+  gap: 0.5em;
+}
+.author-name {
+  font-weight: 700;
+}
+.author-customer-status {
+  color: var(--soft-pink);
+}
+
+/* ================================   */
+/* mobile first */
+/* ================================   */
+main {
+  padding: 1em 2em 3em;
+}
+section {
+  margin: 2em 0;
+}
