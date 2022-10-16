@@ -172,7 +172,6 @@ section {
   }
   .title-card {
     text-align: unset;
-    border: 1px solid red;
   }
   .title-card h1 {
     font-size: 4em;
@@ -203,7 +202,6 @@ section {
   }
 
   .ratings-section {
-    border: 1px solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
