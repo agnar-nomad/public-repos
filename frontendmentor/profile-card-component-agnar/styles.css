@@ -34,36 +34,29 @@ main {
   align-items: center;
   background-color: var(--dark-cyan);
   position: relative;
+  overflow: hidden;
 }
-main::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("images/bg-pattern-top.svg");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-  transform: translate(-25%, -25%);
-  border: 1px solid;
-  /* z-index: 1; */
-}
+main::before,
 main::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  right: 0;
-  background-image: url("images/bg-pattern-bottom.svg");
   background-repeat: no-repeat;
-  background-position: right bottom;
   background-size: contain;
   width: 100%;
   height: 100%;
-  /* transform: translate(-25%, -25%); */
-  border: 1px solid;
-  /* z-index: 1; */
+}
+main::before {
+  transform: scale(1.8);
+  top: -20%;
+  left: -70%;
+  background-image: url("images/bg-pattern-top.svg");
+}
+main::after {
+  transform: scale(1.7);
+  bottom: -50%;
+  right: -80%;
+  background-image: url("images/bg-pattern-bottom.svg");
+  background-position: right;
 }
 
 article {
@@ -77,6 +70,7 @@ article {
   background-repeat: no-repeat;
   border-radius: 1rem;
   /* box-shadow: 0px 1px 5px 1px; */
+  /* couldn't make the shadow work */
 }
 .profile-section {
   display: flex;
@@ -125,6 +119,7 @@ article {
   padding-top: 0.5em;
   letter-spacing: 2px;
 }
+/* end */
 
 .attribution {
   font-size: 11px;
@@ -134,4 +129,18 @@ article {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* media queries */
+@media only screen and (min-width: 960px) {
+  main::before {
+    transform: scale(1);
+    top: -40%;
+    left: -10%;
+  }
+  main::after {
+    transform: scale(1);
+    bottom: -50%;
+    right: -10%;
+  }
 }
