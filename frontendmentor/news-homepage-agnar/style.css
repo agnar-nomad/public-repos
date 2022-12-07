@@ -1,0 +1,94 @@
+:root {
+  /* Primary colours */
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+
+  /* Neutral colours */
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+
+  --size: 15px;
+}
+
+/* CSS reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+/* rubbish */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2em;
+}
+
+/* FONTS */
+html {
+  text-rendering: optimizeSpeed;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--size);
+  font-weight: 400;
+}
+.nav-link {
+  text-decoration: none;
+  color: var(--grayish-blue);
+  font-size: 1.2rem;
+}
+h1,
+h4 {
+  color: var(--very-dark-blue);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--soft-orange);
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+h1,
+h3,
+h4 {
+  font-weight: 800;
+}
+.subtitle {
+  color: var(--dark-grayish-blue);
+}
+
+/* LAYOUT and BG */
+body {
+  padding: 1em;
+  background-color: var(--off-white);
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main {
+  display: grid;
+}
