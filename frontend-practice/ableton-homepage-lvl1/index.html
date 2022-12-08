@@ -4,29 +4,176 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
+    <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet" /> -->
+      rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <script
-      type="module"
-      src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <title>Ableton Homepage Clone</title>
+    <script src="script.js" type="module"></script>
+    <title>Ableton About Page Clone</title>
   </head>
 
   <body>
     <div class="page">
-      <header></header>
-      <main></main>
+      <header>
+        <nav class="navbar-primary">
+          <a href="#" class="main-logo">
+            <i class="bx bx-bar-chart logo"></i
+            ><i class="bx bx-bar-chart bx-rotate-90 logo"></i>
+          </a>
+          <button class="navbar-primary__btn-menu">Menu</button>
+          <div class="navbar-primary__main">
+            <ul>
+              <li class="main-link-item"><a href="#">Live</a></li>
+              <li class="main-link-item"><a href="#">Push</a></li>
+              <li class="main-link-item"><a href="#">Note</a></li>
+              <li class="main-link-item"><a href="#">Link</a></li>
+              <li class="main-link-item"><a href="#">Shop</a></li>
+              <li class="main-link-item"><a href="#">Packs</a></li>
+              <li class="main-link-item"><a href="#">Help</a></li>
+              <li class="main-link-item free-trial-link">
+                <a href="#">Try Live for free</a>
+              </li>
+              <li class="main-link-item login-text">
+                <a href="#">Log in or register</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-primary__more">
+            <section class="navbar-primary__more__first">
+              <div>More on Ableton.com:</div>
+              <ul>
+                <li class="main-link-item"><a href="#">Blog</a></li>
+                <li class="main-link-item">
+                  <a href="#">Ableton for the Classroom</a>
+                </li>
+                <li class="main-link-item">
+                  <a href="#">Ableton for Colleges and Universities</a>
+                </li>
+                <li class="main-link-item">
+                  <a href="#">Certified Training</a>
+                </li>
+                <li class="main-link-item"><a href="#">About Ableton</a></li>
+                <li class="main-link-item"><a href="#">Jobs</a></li>
+                <li class="main-link-item"><a href="#">Apprenticeship</a></li>
+              </ul>
+            </section>
+            <section class="navbar-primary__more__second">
+              <div>More from Ableton:</div>
+            </section>
+          </div>
+        </nav>
+        <button class="navbar-primary__btn-more">More +</button>
+
+        <nav class="navbar-secondary">
+          <ul>
+            <li class="main-link-item"><a href="#">About</a></li>
+            <li class="main-link-item"><a href="#">Jobs</a></li>
+            <li class="main-link-item"><a href="#">Apprenticeship</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section class="about-section hero about-1">
+          <div class="hero-image">
+            <h1 class="hero-title">Unableton</h1>
+          </div>
+        </section>
+        <section class="about-section about-text about-2">
+          <h2>
+            We make <span class="blue-inline-link">Live</span>,
+            <span class="blue-inline-link">Push</span> and
+            <span class="blue-inline-link">Link</span> — unique software and
+            hardware for music creation and performance. With these products,
+            our community of users creates amazing things.
+          </h2>
+          <p>
+            Ableton was founded in 1999 and released the first version of Live
+            in 2001. Our products are used by a community of dedicated
+            musicians, sound designers, and artists from across the world.
+          </p>
+        </section>
+        <section class="about-section about-collage about-3">
+          <img
+            class="about-3-img-1"
+            src="assets/images/office-square.jpg"
+            alt="Woman working in the office" /><img
+            class="about-3-img-2"
+            src="assets/images/ableton-pad.jpg"
+            alt="Ableton music pad product" />
+        </section>
+        <section class="about-section about-text about-4">
+          <h2>
+            Making music isn't easy. It takes time, effort, and learning. But
+            when you're in the flow, it's incredibly rewarding.
+          </h2>
+          <p>
+            We feel the same way about making Ableton products. The driving
+            force behind Ableton is our passion for what we make, and the people
+            we make it for.
+          </p>
+        </section>
+        <section class="about-section about-collage about-5">
+          <!-- <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/9SbnhgjeyXA"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe> -->
+        </section>
+        <section class="about-section about-text about-6">
+          <h2>
+            We are more than 350 people from 30 different countries divided
+            between our headquarters in Berlin and our offices in Los Angeles
+            and Tokyo.
+          </h2>
+          <p>
+            Most of us are active musicians, producers, and DJs, and many of us
+            use Live and Push every day. We come from a wide range of cultural
+            and professional backgrounds. Some of us have PhDs, some are
+            self-taught, and most of us are somewhere in between. What connects
+            us is the shared belief that each of us has the skills and knowledge
+            to contribute to something big: helping to shape the future of music
+            culture.
+          </p>
+        </section>
+        <section class="about-section about-collage about-7"></section>
+        <section class="about-section about-text about-8">
+          <h2>
+            We're passionate about what we do, but we're equally passionate
+            about improving who we are.
+          </h2>
+          <p>
+            We work hard to foster an environment where people can grow both
+            personally and professionally, and we strive to create a wealth of
+            opportunities to learn from and with each other.
+          </p>
+          <p>
+            Alongside an internal training program, employees are actively
+            supported in acquiring new knowledge and skills, and coached on
+            applying these in their daily work. In addition, staff-organized
+            development and music salons are a chance to discuss new
+            technologies, production techniques and best practices.
+          </p>
+        </section>
+        <section class="about-section about-collage about-9">
+          <p>
+            We're really proud of the work we've done so far. But there's so
+            much more to come. If you'd like to be a part of it, please join us.
+          </p>
+          <p class="blue-inline-link">See latest jobs &rarr;</p>
+        </section>
+      </main>
       <footer></footer>
     </div>
 
-    <h1>Hello, Boxicons!</h1>
     <box-icon name="hot" type="solid" color="red"></box-icon>
     <box-icon type="solid" name="hot"></box-icon>
     <box-icon type="logo" name="facebook-square"></box-icon>
