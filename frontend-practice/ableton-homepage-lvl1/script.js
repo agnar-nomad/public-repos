@@ -21,3 +21,5 @@ moreBtn.addEventListener('click', () => {
     extraHeight + 20
   }px`;
 });
+
+observe;
