@@ -81,7 +81,7 @@ main p {
   font-size: 2rem;
 }
 .main-link-item a {
-  color: abl var(--abl-bg);
+  color: var(--abl-bg);
   font-weight: 700;
   cursor: pointer;
   font-size: 0.9rem;
@@ -141,6 +141,7 @@ body {
 
   background: transparent;
   border: none;
+  font-weight: 700;
 }
 .navbar-primary__btn-menu::after {
   content: '\2304';
@@ -160,7 +161,6 @@ body {
   background-color: var(--abl-blue);
   color: var(--abl-bg);
   padding: 0.5em 1em;
-  /* translate: 0 -150%; */
   transform: translateY(-150%);
   transition: transform 700ms ease-out;
 }
@@ -171,11 +171,57 @@ body {
   display: inline-block;
   margin-top: 2rem;
 }
+.navbar-primary__btn-more {
+  display: none;
+}
+.main-link-item {
+  padding: 0.5em 0;
+}
+.navbar-primary__more > section {
+  font-weight: 700;
+  margin: 0.5em 0;
+}
+.navbar-primary__more div {
+  font-size: 1.1rem;
+  margin: 0.2em 0;
+}
+.navbar-primary__more__second ul {
+  display: flex;
+  gap: 4em;
+  padding-bottom: 2em;
+  border-bottom: 2px solid #ddd;
+  overflow-y: hidden;
+}
+.navbar-primary__more__second ul li p {
+  font-weight: 400;
+  font-size: 0.8rem;
+  padding-top: 0.4em;
+  min-width: 20ch;
+}
+.navbar-primary__more .main-link-item {
+  padding: 0.25em 0;
+}
+.navbar-secondary {
+  padding: 0.5em 1em;
+}
+.navbar-secondary ul {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
 
 @media only screen and (min-width: 1024px) {
+  .main-link-item a {
+    color: var(--abl-text);
+    font-size: 0.9rem;
+  }
+  .navbar-primary__more a {
+    /* font-weight: 400; */
+    font-size: 0.6rem;
+  }
   .navbar-primary {
     display: flex;
-    gap: 0.5em;
+    gap: 1em;
   }
   .navbar-primary__btn-menu {
     display: none;
@@ -183,13 +229,13 @@ body {
   .navbar-primary__btn-menu::after {
     display: none;
   }
-  }
+
   .navbar-primary__content {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 5; */
     background-color: var(--abl-bg);
     color: var(--abl-text);
     padding: 0.5em 1em;
@@ -201,46 +247,65 @@ body {
     margin-top: 0;
     padding-left: 4rem;
     display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  .free-trial-link {
+    margin-left: auto;
+  }
+  .free-trial-link a {
+    color: var(--abl-blue);
+  }
+
+  .navbar-primary__btn-more {
+    font: inherit;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    background: transparent;
+    border: none;
+    color: var(--abl-coral);
+    font-weight: 700;
   }
   .main-link-item {
-    padding: 0.05em 0;
+    padding: 0.2em 0;
   }
+
   .navbar-primary__more > section {
-    font-weight: 700;
-    margin: 0.05em 0;
+    margin: 0.5em 0;
+  }
+  .navbar-primary__more div {
+    font-size: 1.5rem;
+    margin: 0.5em 0;
+  }
+  .navbar-primary__more__first ul {
+    display: flex;
+    gap: 1em;
   }
   .navbar-primary__more .main-link-item {
     padding: 0.25em 0;
   }
+  .navbar-primary__more .main-link-item a {
+    font-weight: 400;
+  }
+
+  .navbar-primary__more {
+    display: none;
+  }
+  .navbar-primary__more.more-is-open {
+    display: block;
+  }
   .navbar-secondary {
     padding: 0.5em 1em;
-    background: blue;
   }
   .navbar-secondary ul {
     display: flex;
     align-items: center;
     gap: 2em;
   }
-}
-
-.main-link-item {
-  padding: 0.5em 0;
-}
-.navbar-primary__more > section {
-  font-weight: 700;
-  margin: 0.5em 0;
-}
-.navbar-primary__more .main-link-item {
-  padding: 0.25em 0;
-}
-.navbar-secondary {
-  padding: 0.5em 1em;
-  background: blue;
-}
-.navbar-secondary ul {
-  display: flex;
-  align-items: center;
-  gap: 2em;
 }
 
 /* MAIN content */
@@ -357,8 +422,6 @@ main {
 .about-9-wrapper {
   width: 100%;
   height: min(60vw, 800px);
-  /* display: grid; */
-  /* grid-template-rows: 2fr 1fr; */
   display: flex;
   flex-direction: column;
 }
@@ -476,8 +539,9 @@ footer {
   display: flex;
   margin-right: 0.25em;
 }
-.footer-bottom__copyright .logo {
+.footer-bottom__copyright .footer-logo {
   color: var(--abl-text);
+  font-size: 2rem;
 }
 
 /* MEDIA QUERIES */
