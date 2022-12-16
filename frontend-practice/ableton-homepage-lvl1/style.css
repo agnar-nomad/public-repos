@@ -117,22 +117,112 @@ body {
 
 /* NAVIGATION */
 .navbar-primary {
-  background-color: var(--abl-blue);
-  color: var(--abl-bg);
+  color: var(--abl-text);
   width: 100%;
-
-  position: relative;
-  z-index: 5;
-  padding: 0.5em 1em;
-  translate: 0 -100%;
-  transition: translate 700ms ease-out;
-}
-.navbar-primary.is-expanded {
-  translate: 0 0%;
+  display: flex;
+  gap: 0.5em;
+  padding: 0.5em;
 }
 .main-logo {
-  border: 1px solid red;
+  display: flex;
+  width: min-content;
+  position: relative;
+  z-index: 10;
 }
+.main-logo .bx {
+  color: var(--abl-text);
+}
+.navbar-primary__btn-menu {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  background: transparent;
+  border: none;
+}
+.navbar-primary__btn-menu::after {
+  content: '\2304';
+  translate: 2px -2px;
+}
+.navbar-primary__btn-menu.menu-is-down,
+.logo.menu-is-down {
+  color: var(--abl-bg);
+  transition: color 0.5s ease-in;
+}
+.navbar-primary__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: var(--abl-blue);
+  color: var(--abl-bg);
+  padding: 0.5em 1em;
+  /* translate: 0 -150%; */
+  transform: translateY(-150%);
+  transition: transform 700ms ease-out;
+}
+.navbar-primary__content.is-expanded {
+  transform: translateY(0);
+}
+.navbar-primary__main {
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .navbar-primary {
+    display: flex;
+    gap: 0.5em;
+  }
+  .navbar-primary__btn-menu {
+    display: none;
+  }
+  .navbar-primary__btn-menu::after {
+    display: none;
+  }
+  }
+  .navbar-primary__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    background-color: var(--abl-bg);
+    color: var(--abl-text);
+    padding: 0.5em 1em;
+    transform: translateY(0);
+    transition: transform 0ms ease-out;
+  }
+  .navbar-primary__main {
+    display: inline-block;
+    margin-top: 0;
+    padding-left: 4rem;
+    display: flex;
+  }
+  .main-link-item {
+    padding: 0.05em 0;
+  }
+  .navbar-primary__more > section {
+    font-weight: 700;
+    margin: 0.05em 0;
+  }
+  .navbar-primary__more .main-link-item {
+    padding: 0.25em 0;
+  }
+  .navbar-secondary {
+    padding: 0.5em 1em;
+    background: blue;
+  }
+  .navbar-secondary ul {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+  }
+}
+
 .main-link-item {
   padding: 0.5em 0;
 }
@@ -145,6 +235,7 @@ body {
 }
 .navbar-secondary {
   padding: 0.5em 1em;
+  background: blue;
 }
 .navbar-secondary ul {
   display: flex;

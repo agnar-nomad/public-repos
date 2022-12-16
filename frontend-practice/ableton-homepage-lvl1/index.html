@@ -30,8 +30,8 @@
             ><i class="bx bx-bar-chart bx-rotate-90 logo"></i>
           </a>
           <button class="navbar-primary__btn-menu">Menu</button>
-          <div class="navbar-primary__main">
-            <ul>
+          <div id="navbar-primary-content" class="navbar-primary__content">
+            <ul class="navbar-primary__main">
               <li class="main-link-item"><a href="#">Live</a></li>
               <li class="main-link-item"><a href="#">Push</a></li>
               <li class="main-link-item"><a href="#">Note</a></li>
@@ -39,6 +39,10 @@
               <li class="main-link-item"><a href="#">Shop</a></li>
               <li class="main-link-item"><a href="#">Packs</a></li>
               <li class="main-link-item"><a href="#">Help</a></li>
+              <li class="main-link-item">
+                <button class="navbar-primary__btn-more">More +</button>
+              </li>
+
               <li class="main-link-item free-trial-link">
                 <a href="#">Try Live for free</a>
               </li>
@@ -46,32 +50,31 @@
                 <a href="#">Log in or register</a>
               </li>
             </ul>
-          </div>
-          <div id="more" class="navbar-primary__more">
-            <section class="navbar-primary__more__first">
-              <div>More on Ableton.com:</div>
-              <ul>
-                <li class="main-link-item"><a href="#">Blog</a></li>
-                <li class="main-link-item">
-                  <a href="#">Ableton for the Classroom</a>
-                </li>
-                <li class="main-link-item">
-                  <a href="#">Ableton for Colleges and Universities</a>
-                </li>
-                <li class="main-link-item">
-                  <a href="#">Certified Training</a>
-                </li>
-                <li class="main-link-item"><a href="#">About Ableton</a></li>
-                <li class="main-link-item"><a href="#">Jobs</a></li>
-                <li class="main-link-item"><a href="#">Apprenticeship</a></li>
-              </ul>
-            </section>
-            <section class="navbar-primary__more__second">
-              <div>More from Ableton:</div>
-            </section>
+            <div id="more" class="navbar-primary__more">
+              <section class="navbar-primary__more__first">
+                <div>More on Ableton.com:</div>
+                <ul>
+                  <li class="main-link-item"><a href="#">Blog</a></li>
+                  <li class="main-link-item">
+                    <a href="#">Ableton for the Classroom</a>
+                  </li>
+                  <li class="main-link-item">
+                    <a href="#">Ableton for Colleges and Universities</a>
+                  </li>
+                  <li class="main-link-item">
+                    <a href="#">Certified Training</a>
+                  </li>
+                  <li class="main-link-item"><a href="#">About Ableton</a></li>
+                  <li class="main-link-item"><a href="#">Jobs</a></li>
+                  <li class="main-link-item"><a href="#">Apprenticeship</a></li>
+                </ul>
+              </section>
+              <section class="navbar-primary__more__second">
+                <div>More from Ableton:</div>
+              </section>
+            </div>
           </div>
         </nav>
-        <button class="navbar-primary__btn-more">More +</button>
 
         <nav class="navbar-secondary">
           <ul>
@@ -302,9 +305,9 @@
             ><a href="" class="legal-link">Imprint</a>
           </div>
           <div class="footer-bottom__copyright">
-            <span class="logo">
-              <i class="bx bx-bar-chart"></i
-              ><i class="bx bx-bar-chart bx-rotate-90 logo"></i>
+            <span class="footer-logo">
+              <i class="bx bx-bar-chart footer-logo"></i
+              ><i class="bx bx-bar-chart bx-rotate-90 footer-logo"></i>
             </span>
             <span>Made in Berlin</span>
           </div>
