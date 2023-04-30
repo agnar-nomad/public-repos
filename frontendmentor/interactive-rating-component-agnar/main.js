@@ -1,24 +1,39 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+const mainContainer = document.querySelector('.container');
+const ratingStateContent = document.querySelector('.rating-state');
+const thanksStateContent = document.querySelector('.thanks-state');
+const ratingValue = document.querySelector('.rating-value');
+const voteButtons = document.querySelectorAll('.vote-btn');
+const submitBtn = document.querySelector('.submit-rating');
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+mainContainer.appendChild = ratingStateContent;
 
-setupCounter(document.querySelector('#counter'))
+thanksStateContent.classList.add('hidden');
+
+let selectedRating = null;
+
+voteButtons.forEach((btn) =>
+  btn.addEventListener('click', (e) => {
+    const clicked = e.target.dataset.value;
+    console.log('line 16: ', clicked, typeof clicked);
+    selectedRating = clicked;
+  })
+);
+
+// voteButtons.forEach((btn) =>
+//   btn.addEventListener('blur', () => {
+//     selectedRating = '0';
+//     console.log('line 27: ', selectedRating);
+//   })
+// );
+// breaks the 'submit' functionality, because blur comes before the submit click event
+
+submitBtn.addEventListener('click', () => {
+  if (!selectedRating) return;
+
+  ratingValue.innerHTML = selectedRating;
+
+  ratingStateContent.classList.add('hidden');
+  thanksStateContent.classList.remove('hidden');
+
+  console.log('line 38: ', 'SUBMIT event ran');
+});
