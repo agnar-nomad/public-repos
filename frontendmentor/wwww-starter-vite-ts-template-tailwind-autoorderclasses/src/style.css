@@ -3,7 +3,15 @@
 @tailwind utilities;
 
 :root {
- 
+  /* ### Primary */
+  --purple: #854dff
+  --light-red: hsl(0, 100%, 67%);
+  /* ### Neutral */
+
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
 }
 
 /* RESET */
@@ -14,9 +22,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  font-family:  sans-serif;
+  font-family: sans-serif;
+  font-size: 32px;
   line-height: 1.5;
   font-weight: 400;
+  background-color: var(--off-white);
+  color: var(--off-black);
 }
 
 #app {
@@ -27,7 +38,6 @@ body {
 }
 
 /* MY STYLES */
-
 
 /* VITE */
 
